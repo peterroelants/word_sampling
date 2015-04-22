@@ -26,7 +26,6 @@ class AliasMethod(object):
         total_wordcount = float(sum([t[1] for t in word_frequencies]))
         # Get the size of the vocabulary
         self.vocab_size = len(word_frequencies)
-        print 'vocab_size: ', self.vocab_size
         # Create a list with (word, normalized probability) elements.
         # normalized probabilities = p_i * vocab_size
         self.words = [(key, (count * self.vocab_size) / total_wordcount)
@@ -68,9 +67,6 @@ class AliasMethod(object):
         for l_idx, l_np in small:  # iterate over remaining small elements
              # Remaining element should have probability 1
             self.prob[l_idx] = 1
-
-        print 'self.alias: ', self.alias
-        print 'self.prob: ', self.prob
 
     def sample(self):
         """
