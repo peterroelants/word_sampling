@@ -8,13 +8,13 @@ To generate 10 samples from the word distribution defined by the corpus at `./da
 
 ## Parsing the corpus
 
-Only standard libraries are used. The lines in the corpus are split into tokens with a very simple regular expression. More advanced tokenisation can be achieved with the help of the [NLTK library](http://www.nltk.org/). Lines are converted to lowercase during tokenisation.
+Only standard libraries are used. The lines in the corpus are split into tokens with a very simple regular expression. More advanced tokenization can be achieved with the help of the [NLTK library](http://www.nltk.org/). Lines are converted to lowercase during tokenization.
 
 During parsing, a Python dictionary is used to hold the current number of occurrences of each token. 
 
 
 ## Alias sampling method
 
-The [alias method](http://en.wikipedia.org/wiki/Alias_method) is used to create a data-structure that allows for efficient sampling from the word occurrence distribution. The algorithm can sample from the distribution in O(1) constant time. The memory usage is O(n), and the preprocessing uses O(n) time.
+The [alias method](http://en.wikipedia.org/wiki/Alias_method) is used to create a data-structure that allows for efficient sampling from the word occurrence distribution. The algorithm can sample from the distribution in O(1) constant time. The memory usage is O(n), and the preprocessing uses O(n) time, with n the size of the vocabulary.
 
 The alias method implemented here is based upon the description by [Keith Schwarz](http://keithschwarz.com/darts-dice-coins/).
