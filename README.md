@@ -10,7 +10,7 @@ To generate 10 samples from the word distribution defined by the corpus at `./da
 
 Only standard libraries are used. The lines in the corpus are split into tokens with a very simple regular expression. More advanced tokenisation can be achieved with the help of the [NLTK library](http://www.nltk.org/). Lines are converted to lowercase during tokenisation.
 
-During parsing a Python dictionary is used to hold the current number of occurrences of each token. 
+During parsing, a Python dictionary is used to hold the current number of occurrences of each token. 
 
 
 ## Alias sampling method
